@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "strict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "outDir": "./dist/scripts",
+    "noEmitOnError": true,
+    "removeComments": true,
+    "lib": ["DOM","ESNext"],
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "typeRoots": ["node_modules/@types"],
+    "sourceMap": true,
+  },
+  "include": ["./src"],
+}

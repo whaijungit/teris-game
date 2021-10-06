@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teris game</title>
+    <style>
+      #teris {
+        justify-content: center;
+        display: flex;
+      }
+      #tip {
+        margin-left: 1em;
+        /* border: 1px solid #ccc; */
+      }
+      #panel {
+        width: 300px;
+        height: 300px;
+        background-color: #000;
+        position: relative;
+      }
+      #score {
+        text-align: center;
+        color: #f40;
+        font-weight: bold;
+        font-size: 2em;
+      }
+      #next {
+        position: relative;
+        width: 120px;
+        height: 120px;
+      }
+      #msg {
+        position: absloute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255, 0.5);
+        /* z-index: 9999; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+      }
+      #msg p {
+        border: 2px solid #fff;
+        padding: 1em;
+        background-color: #f40;
+        color: #fff;
+        z-index: 99;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="teris">
+      <div id="panel">
+        <div id="msg">
+          <p>pause</p>
+        </div>
+      </div>
+      <div id="tip">
+        <div id="next"></div>
+        <div id="score"></div>
+        <pre>
+          使用光标进行游戏
+          
+          ↑：选转方块
+          
+          ↓：直接移动到下
+          
+          ←：左位移一个间距
+          
+          →：左位移一个间距
+
+          空格：暂停/开始/继续
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
