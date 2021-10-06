@@ -7,7 +7,7 @@ import GamgeConfig from "../config/GamgeConfig";
 import PagerConfig from "../config/PagerConfig";
 
 export class GamePageViewer implements GameViewer {
-  
+
   private nextDom = $("#next");
   private panelDom = $("#panel");
   private scoreDom = $("#score");
@@ -23,10 +23,10 @@ export class GamePageViewer implements GameViewer {
       height: GamgeConfig.nextSize.height * PagerConfig.RectangleSize.height,
     })
     // 设备事件
-    $(document).keydown(function (e) {
+    $(document).keydown((e) => {
       if (e.keyCode === 37) {
         game.controlLeft()
-      }else if (e.keyCode === 39) {
+      } else if (e.keyCode === 39) {
         game.controlRight()
       } else if (e.keyCode === 38) {
         game.controlRotate()
