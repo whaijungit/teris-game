@@ -4,10 +4,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "develpoment",
-  entry: "./src/index.ts",
+  entry: {
+    game: "./src/index.ts"
+  },
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
-    filename: "scripts/bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: "scripts/main.js"
   },
   plugins: [
     new CleanWebpackPlugin(),

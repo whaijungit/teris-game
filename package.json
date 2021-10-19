@@ -1,8 +1,10 @@
 {
   "name": "teris-game",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/scripts/main.js",
   "license": "MIT",
+  "description":"teris Game",
+  "author":"BoBoCo",
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack-dev-server --mode=development"

@@ -6,7 +6,9 @@
     "jsRules": {},
     "rules": {
         "no-unused-expression": false,
-        "no-console":false
+        "no-console":false,
+        "max-classes-per-file": false,
+        "no-shadowed-variable": false
     },
-    "rulesDirectory": []
+    "rulesDirectory": ["./src"]
 }

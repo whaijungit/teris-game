@@ -1,7 +1,7 @@
 /*---------------------------------------
-  interface teris interface type enum 
-  and types exsitois 
-  [rectangle rectangleGroup Point 
+  interface teris interface type enum
+  and types exsitois
+  [rectangle rectangleGroup Point
   rectangleViewer GameViewer Shape
   MoveDirection GameStatus]
 ---------------------------------------*/

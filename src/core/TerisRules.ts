@@ -29,6 +29,7 @@ export class TerisRules {
   }
 
   static move(teris: RectangleGroup, drirection: MovedDirection, exesits: Rectangle[]): boolean
+  // tslint:disable-next-line: unified-signatures
   static move(teris: RectangleGroup, tragetPoint: Point, exesits: Rectangle[]): boolean
   static move(teris: RectangleGroup, tragetPointOrDirection: Point | MovedDirection, exesits: Rectangle[]): boolean {
     if (isPoint(tragetPointOrDirection)) {
@@ -62,7 +63,7 @@ export class TerisRules {
   }
 
   static moveDirectly(teris: RectangleGroup, drirection: MovedDirection, exesits: Rectangle[]) {
-    while (this.move(teris, drirection, exesits)) { }
+    while (this.move(teris, drirection, exesits));
   }
 
   static rotate(teris: RectangleGroup, exesits: Rectangle[]): boolean {

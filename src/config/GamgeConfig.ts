@@ -1,7 +1,7 @@
 export default {
   panlSzie: {
-    width: 14,
-    height: 24,
+    width: 13,
+    height: 20,
   },
   nextSize: {
     width: 5,
@@ -10,7 +10,7 @@ export default {
   levels: [
     { score: 0, duartion: 1500 },
     { score: 100, duartion: 700 },
-    { score: 300, duartion: 500 },
-    { score: 600, duartion: 300 },
+    { score: 500, duartion: 500 },
+    { score: 1000, duartion: 300 },
   ]
 }

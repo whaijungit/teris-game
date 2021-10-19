@@ -1,3 +1,8 @@
+/**
+ * The game class is responsible for managing the game process
+ * implements gameViewer viewer show platform os
+ */
+
 import { createTeris } from "./Teris";
 import { Rectangle } from "./Rectangle";
 import { TerisRules } from "./TerisRules";
@@ -6,13 +11,13 @@ import { RectangleGroup } from "./RectangleGroup";
 import { GameStatus, GameViewer, MovedDirection } from "../interface";
 
 export class Game {
-  private gameStatus: GameStatus = GameStatus.init 
+  private gameStatus: GameStatus = GameStatus.init
   private cureTeris?: RectangleGroup
-  private nextTeris: RectangleGroup;
+  private nextTeris: RectangleGroup
   private timer?: number
-  private duration: number;
-  private exists: Rectangle[] = [];
-  private score: number = 0;
+  private duration: number
+  private exists: Rectangle[] = []
+  private score: number = 0
 
   public get _gameStatus() {
     return this.gameStatus
@@ -61,10 +66,10 @@ export class Game {
 
   pause() {
     if (this.gameStatus === GameStatus.playing) {
-      this.gameStatus = GameStatus.pause;
+      this.gameStatus = GameStatus.pause
       clearInterval(this.timer)
-      this.timer = undefined;
-      this.gameViewer.onPause();
+      this.timer = undefined
+      this.gameViewer.onPause()
     }
   }
 
@@ -142,16 +147,16 @@ export class Game {
 
   private init() {
     this.exists.forEach(rect => rect.getViewer()?.remove())
-    this.exists = [];
+    this.exists = []
     this.createNextTeris()
-    this.cureTeris = undefined;
-    this._score = 0;
+    this.cureTeris = undefined
+    this._score = 0
   }
 
   private createNextTeris() {
     this.nextTeris = createTeris({ clientX: 0, clientY: 0 })
     this.resetCenterPoint(GamgeConfig.nextSize.width, this.nextTeris)
-    this.gameViewer.showNextTeris(this.nextTeris);
+    this.gameViewer.showNextTeris(this.nextTeris)
   }
 
   private addScore(line: number) {
